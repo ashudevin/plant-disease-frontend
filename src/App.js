@@ -12,7 +12,7 @@ function App() {
     formData.append("image", imageFile);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/predict/", formData);
+      const response = await axios.post("https://plant-disease-backend-csjt.onrender.com/predict/", formData);
       setDiseaseData(response.data);
     } catch (error) {
       console.error("Error during prediction:", error);
